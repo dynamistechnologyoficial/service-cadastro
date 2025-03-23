@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity DadosPadrao.
+    -->
+    <changeSet id="20240410003915-1" author="Arthur Freire">
+        <createTable tableName="DYCAD_DadoPadrao">
+            <column name="idDado" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="classePadraoId" type="bigint">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="nome" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="descricao" type="varchar(5000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ativo" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="idDadoDependencia" type="bigint">
+                <constraints nullable="true"/>
+            </column>
+            <column name="classePadraoIdDependencia" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="created_by" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="created_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="last_modified_by" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="last_modified_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

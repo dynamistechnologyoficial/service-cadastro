@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        insert the entity DadoPadrao.
+    -->
+	<changeSet id="SPRINT01_Insert_DadoPadrao_Sexo_TipoDocumento_EstadoCivil"
+		author="Arthur Freire">
+		<!--  Sexo  -->
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="1" />
+			<column name="classePadraoId" value="1" />
+			<column name="nome" value="Feminino" />
+			<column name="descricao" value="Sexo do usuário" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="2" />
+			<column name="classePadraoId" value="1" />
+			<column name="nome" value="Masculino" />
+			<column name="descricao" value="Sexo do usuário" />
+			<column name="ativo" value="1" />
+		</insert>
+		<!--  Sexo  -->
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="1" />
+			<column name="classePadraoId" value="2" />
+			<column name="nome" value="RG" />
+			<column name="descricao" value="Registro Geral" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="2" />
+			<column name="classePadraoId" value="2" />
+			<column name="nome" value="CNH" />
+			<column name="descricao" value="Carteira Nacional de Habilitação" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="3" />
+			<column name="classePadraoId" value="2" />
+			<column name="nome" value="RNE" />
+			<column name="descricao" value="Registro Nacional de Estrangeiro" />
+			<column name="ativo" value="1" />
+		</insert>
+		<!--   Estado Civil   -->
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="1" />
+			<column name="classePadraoId" value="4" />
+			<column name="nome" value="Solteiro" />
+			<column name="descricao" value="Estado Civil" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="2" />
+			<column name="classePadraoId" value="4" />
+			<column name="nome" value="Desquitado(a)" />
+			<column name="descricao" value="Estado Civil" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="3" />
+			<column name="classePadraoId" value="4" />
+			<column name="nome" value="Viúvo(a)" />
+			<column name="descricao" value="Estado Civil" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="4" />
+			<column name="classePadraoId" value="4" />
+			<column name="nome" value="Divorciado(a)" />
+			<column name="descricao" value="Estado Civil" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="5" />
+			<column name="classePadraoId" value="4" />
+			<column name="nome" value="Casado(a) com brasileiro(a) nato(a)" />
+			<column name="descricao" value="Estado Civil" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="6" />
+			<column name="classePadraoId" value="4" />
+			<column name="nome"
+				value="Casado(a) com brasileiro(a) naturalizado(a)" />
+			<column name="descricao" value="Estado Civil" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="7" />
+			<column name="classePadraoId" value="4" />
+			<column name="nome" value="Casado(a) com estrangeiro(a)" />
+			<column name="descricao" value="Estado Civil" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="8" />
+			<column name="classePadraoId" value="4" />
+			<column name="nome" value="União Estável" />
+			<column name="descricao" value="Estado Civil" />
+			<column name="ativo" value="1" />
+		</insert>
+		<!--  Nacionalidade  -->
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="1" />
+			<column name="classePadraoId" value="6" />
+			<column name="nome" value="Brasileiro" />
+			<column name="descricao" value="Brasileiro" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="2" />
+			<column name="classePadraoId" value="6" />
+			<column name="nome" value="Naturalizado" />
+			<column name="descricao" value="Naturalizado" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="3" />
+			<column name="classePadraoId" value="6" />
+			<column name="nome" value="Estrangeiro" />
+			<column name="descricao" value="Estrangeiro" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="1" />
+			<column name="classePadraoId" value="10" />
+			<column name="nome" value="Residência" />
+			<column name="descricao" value="Residência" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="2" />
+			<column name="classePadraoId" value="10" />
+			<column name="nome" value="Trabalho" />
+			<column name="descricao" value="Trabalho" />
+			<column name="ativo" value="1" />
+		</insert>
+		<insert tableName="DYCAD_DadoPadrao">
+			<column name="idDado" value="3" />
+			<column name="classePadraoId" value="10" />
+			<column name="nome" value="Comercial" />
+			<column name="descricao" value="Comercial" />
+			<column name="ativo" value="1" />
+		</insert>
+	</changeSet>
+
+	<!-- Added the entity audit columns -->
+	<changeSet id="SPRINT01_Insert_DadoPadrao_sqlFile_OrgaoEmissor_CBO"
+		author="Arthur Freire">
+		<sqlFile
+			encoding="UTF-8"
+			path="config/liquibase/changelog/Sprint01/InsertOrgaoEmissor.sql" />
+		<sqlFile
+			encoding="UTF-8"
+			path="config/liquibase/changelog/Sprint01/InsertCBOClassificacaoBrasileiraOcupacoes.sql" />
+		<sqlFile
+			encoding="UTF-8"
+			path="config/liquibase/changelog/Sprint01/pais.sql" />
+		<sqlFile
+			encoding="UTF-8"
+			path="config/liquibase/changelog/Sprint01/estado.sql" />
+		<sqlFile
+			encoding="UTF-8"
+			path="config/liquibase/changelog/Sprint01/cidade.sql" />
+	</changeSet>
+   
+</databaseChangeLog>

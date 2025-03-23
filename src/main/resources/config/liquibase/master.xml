@@ -13,8 +13,19 @@
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20250323141126_added_entity_EntidadeTeste.xml" relativeToChangelogFile="false"/>
+	<!--    Sprint 1 - Classes   -->
+    <include file="config/liquibase/changelog/Sprint01/20240410001251_added_entity_ClassePadrao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/Sprint01/20240410003915_added_entity_DadoPadrao.xml" relativeToChangelogFile="false"/>
+
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <!--    Sprint 1 - Constraints   -->
+    <include file="config/liquibase/changelog/Sprint01/20240410003915_added_entity_constraints_DadoPadrao.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <include file="config/liquibase/changelog/20250323143025_added_entity_EntityAuditEvent.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+    
+    <!--    Sprint 1 - Carga de Dados   -->
+    <include file="config/liquibase/changelog/Sprint01/1_Insert_ClassePadrao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/Sprint01/2_Insert_DadoPadrao.xml" relativeToChangelogFile="false"/>
+    
 </databaseChangeLog>

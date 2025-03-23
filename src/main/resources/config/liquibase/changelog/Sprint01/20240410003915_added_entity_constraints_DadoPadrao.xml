@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity DadosPadrao.
+    -->
+    <changeSet id="20240410003915-2" author="Arthur Freire">
+
+        <addForeignKeyConstraint baseColumnNames="classePadraoId"
+                                 baseTableName="DYCAD_DadoPadrao"
+                                 constraintName="fk_DadoPadrao_ClassePadrao_Id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="DYCAD_ClassePadrao"
+                                 />
+                                 
+		<addForeignKeyConstraint baseColumnNames="idDadoDependencia,classePadraoIdDependencia"
+                                 baseTableName="DYCAD_DadoPadrao"
+                                 constraintName="fk_DadoPadrao_DadoPadraoDependencia_Id"
+                                 referencedColumnNames="idDado,classePadraoId"
+                                 referencedTableName="DYCAD_DadoPadrao"
+                                 />                                 
+    </changeSet>
+</databaseChangeLog>

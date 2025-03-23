@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        insert the entity ClassePadrao.
+    -->
+    <changeSet id="SPRINT01_Insert_ClassePadrao" author="Arthur Freire">
+	    <insert tableName="DYCAD_ClassePadrao">
+	        <column name="id" value="1" />
+	        <column name="nome" value="Sexo" />
+	        <column name="descricao" value="Sexo do usuário" />
+	    </insert>
+	    <insert tableName="DYCAD_ClassePadrao">
+	        <column name="id" value="2" />
+	        <column name="nome" value="TipoDocumento" />
+	        <column name="descricao" value="Tipo de Documento" />
+	    </insert>
+	    <insert tableName="DYCAD_ClassePadrao">
+	        <column name="id" value="3" />
+	        <column name="nome" value="OrgaoEmissor" />
+	        <column name="descricao" value="Órgão Emissor" />
+	    </insert>
+	    <insert tableName="DYCAD_ClassePadrao">
+	        <column name="id" value="4" />
+	        <column name="nome" value="EstadoCivil" />
+	        <column name="descricao" value="Estado Civil" />
+	    </insert>
+	    <insert tableName="DYCAD_ClassePadrao">
+	        <column name="id" value="5" />
+	        <column name="nome" value="CBO" />
+	        <column name="descricao" value="Classificação Brasileira de Ocupações" />
+	    </insert>
+	    <insert tableName="DYCAD_ClassePadrao">
+	        <column name="id" value="6" />
+	        <column name="nome" value="Nacionalidade" />
+	        <column name="descricao" value="Nacionalidade" />
+	    </insert>
+	    <insert tableName="DYCAD_ClassePadrao">
+	        <column name="id" value="7" />
+	        <column name="nome" value="País" />
+	        <column name="descricao" value="País" />
+	    </insert>
+	    <insert tableName="DYCAD_ClassePadrao">
+	        <column name="id" value="8" />
+	        <column name="nome" value="Estado" />
+	        <column name="descricao" value="Estado" />
+	    </insert>
+	    <insert tableName="DYCAD_ClassePadrao">
+	        <column name="id" value="9" />
+	        <column name="nome" value="Cidade" />
+	        <column name="descricao" value="Cidade" />
+	    </insert>
+	    <insert tableName="DYCAD_ClassePadrao">
+	        <column name="id" value="10" />
+	        <column name="nome" value="TipoEndereco" />
+	        <column name="descricao" value="Tipo Endereço" />
+	    </insert>
+	</changeSet>
+   
+</databaseChangeLog>

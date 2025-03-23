@@ -19,7 +19,7 @@
     "devDatabaseType": "mysql",
     "enableHibernateCache": null,
     "enableTranslation": true,
-    "entities": ["EntidadeTeste"],
+    "entities": ["ClassePadrao", "DadoPadrao", "EntidadeTeste"],
     "feignClient": true,
     "jhipsterVersion": "8.9.0",
     "jwtSecretKey": "NjE3NDE0OGFkMWVhODdiMzA1YTcxYWQxYzljYjg2NDY0NzU4MDUzODdlZDRiNTZmYzMzY2YwZDc4ZWEzZmU2MWVhY2YxZmNiMDEyY2IyY2VlYTAwZDBhYjVmYWNlMmY2ZmYxYmRhYTg3MzdiNGUxMjMzYjAwYWVjZDljOTljZjQ=",

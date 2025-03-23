@@ -524,7 +524,7 @@ class EntidadeTesteResourceIT {
         EntidadeTeste partialUpdatedEntidadeTeste = new EntidadeTeste();
         partialUpdatedEntidadeTeste.setId(entidadeTeste.getId());
 
-        partialUpdatedEntidadeTeste.dtnascimento(UPDATED_DTNASCIMENTO).ativooo(UPDATED_ATIVOOO);
+        partialUpdatedEntidadeTeste.nome(UPDATED_NOME).dtnascimento(UPDATED_DTNASCIMENTO);
 
         restEntidadeTesteMockMvc
             .perform(
