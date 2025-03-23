@@ -1,0 +1,46 @@
+{
+  "generator-jhipster": {
+    "applicationType": "microservice",
+    "authenticationType": "oauth2",
+    "baseName": "ServiceCadastro",
+    "blueprints": [
+      {
+        "name": "generator-jhipster-entity-audit",
+        "version": "5.9.1"
+      }
+    ],
+    "buildTool": "maven",
+    "cacheProvider": "no",
+    "clientFramework": "no",
+    "clientTestFrameworks": null,
+    "clientTheme": null,
+    "creationTimestamp": 1742737712941,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "enableHibernateCache": null,
+    "enableTranslation": true,
+    "entities": ["EntidadeTeste"],
+    "feignClient": true,
+    "jhipsterVersion": "8.9.0",
+    "jwtSecretKey": "NjE3NDE0OGFkMWVhODdiMzA1YTcxYWQxYzljYjg2NDY0NzU4MDUzODdlZDRiNTZmYzMzY2YwZDc4ZWEzZmU2MWVhY2YxZmNiMDEyY2IyY2VlYTAwZDBhYjVmYWNlMmY2ZmYxYmRhYTg3MzdiNGUxMjMzYjAwYWVjZDljOTljZjQ=",
+    "languages": ["pt-br", "en", "es"],
+    "lastLiquibaseTimestamp": 1742740225000,
+    "microfrontend": null,
+    "microfrontends": [],
+    "nativeLanguage": "pt-br",
+    "packageName": "com.banco.cadastro.br",
+    "prodDatabaseType": "mysql",
+    "reactive": false,
+    "serverPort": "8083",
+    "serviceDiscoveryType": "consul",
+    "skipClient": true,
+    "skipUserManagement": true,
+    "syncUserWithIdp": true,
+    "testFrameworks": [],
+    "withAdminUi": null
+  },
+  "generator-jhipster-entity-audit": {
+    "auditFramework": "custom",
+    "entityAuditEventChangelogDate": "20250323143025"
+  }
+}
