@@ -65,8 +65,8 @@ public class DadoPadrao extends AbstractAuditingEntity<DadoPadraoPK> implements 
     
     @ManyToOne(optional = true, fetch = FetchType.LAZY)
     @JoinColumns({
-		@JoinColumn(name = "idDadoDependencia", referencedColumnName = "idDado", insertable = false, nullable = true, updatable = false),
-		@JoinColumn(name = "classePadraoIdDependencia", referencedColumnName = "classePadraoId", insertable = false, nullable = true, updatable = false), })
+		@JoinColumn(name = "idDadoDependencia", referencedColumnName = "idDado", insertable = true, nullable = true, updatable = true),
+		@JoinColumn(name = "classePadraoIdDependencia", referencedColumnName = "classePadraoId", insertable = true, nullable = true, updatable = true), })
     private DadoPadrao dadoPadraoDependencia;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here

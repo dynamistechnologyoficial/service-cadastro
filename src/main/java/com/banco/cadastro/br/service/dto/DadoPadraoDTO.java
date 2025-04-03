@@ -14,6 +14,10 @@ public class DadoPadraoDTO implements Serializable {
 	private Long idDado;
     
     private Long classePadraoId;
+    
+    private Long idDadoDependencia;
+    
+    private Long classePadraoIdDependencia;
 
     @NotNull
     private String nome;
@@ -33,9 +37,6 @@ public class DadoPadraoDTO implements Serializable {
     private String lastModifiedBy;
 
     private Instant lastModifiedDate;
-
-    @NotNull
-    private ClassePadraoDTO classePadrao;
 
     public String getNome() {
         return nome;
@@ -125,15 +126,23 @@ public class DadoPadraoDTO implements Serializable {
         this.lastModifiedDate = lastModifiedDate;
     }
 
-    public ClassePadraoDTO getClassePadrao() {
-        return classePadrao;
-    }
+    public Long getIdDadoDependencia() {
+		return idDadoDependencia;
+	}
 
-    public void setClassePadrao(ClassePadraoDTO classePadrao) {
-        this.classePadrao = classePadrao;
-    }
+	public void setIdDadoDependencia(Long idDadoDependencia) {
+		this.idDadoDependencia = idDadoDependencia;
+	}
 
-    @Override
+	public Long getClassePadraoIdDependencia() {
+		return classePadraoIdDependencia;
+	}
+
+	public void setClassePadraoIdDependencia(Long classePadraoIdDependencia) {
+		this.classePadraoIdDependencia = classePadraoIdDependencia;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;

@@ -1,22 +1,33 @@
 package com.banco.cadastro.br.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.HashSet;
-import java.util.Set;
+
 import org.springframework.data.domain.Persistable;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.PostLoad;
+import jakarta.persistence.PostPersist;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
+import jakarta.validation.constraints.NotNull;
+
 /**
- * A ClassePadrao.
+ * A ArqMetadata.
  */
 @Entity
-@Table(name = "DYCAD_ClassePadrao")
+@Table(name = "DYCAD_ArqMetadata")
 @JsonIgnoreProperties(value = { "new" })
 @SuppressWarnings("common-java:DuplicatedBlocks")
-public class ClassePadrao extends AbstractAuditingEntity<Long> implements Serializable, Persistable<Long> {
+public class ArqMetadata extends AbstractAuditingEntity<Long> implements Serializable, Persistable<Long> {
 
     private static final long serialVersionUID = 1L;
 
@@ -26,11 +37,15 @@ public class ClassePadrao extends AbstractAuditingEntity<Long> implements Serial
     private Long id;
 
     @NotNull
-    @Column(name = "nome", nullable = false, unique = true)
+    @Column(name = "nome", nullable = false)
     private String nome;
 
-    @Column(name = "descricao")
-    private String descricao;
+    @Column(name = "obs")
+    private String obs;
+
+    @NotNull
+    @Column(name = "arquivoContentType", nullable = false)
+    private String arquivoContentType;
 
     // Inherited createdBy definition
     // Inherited createdDate definition
@@ -40,17 +55,13 @@ public class ClassePadrao extends AbstractAuditingEntity<Long> implements Serial
     @Transient
     private boolean isPersisted;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "classePadrao")
-    @JsonIgnoreProperties(value = { "classePadrao" }, allowSetters = true)
-    private Set<DadoPadrao> dadoPadraos = new HashSet<>();
-
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public Long getId() {
         return this.id;
     }
 
-    public ClassePadrao id(Long id) {
+    public ArqMetadata id(Long id) {
         this.setId(id);
         return this;
     }
@@ -63,7 +74,7 @@ public class ClassePadrao extends AbstractAuditingEntity<Long> implements Serial
         return this.nome;
     }
 
-    public ClassePadrao nome(String nome) {
+    public ArqMetadata nome(String nome) {
         this.setNome(nome);
         return this;
     }
@@ -72,39 +83,52 @@ public class ClassePadrao extends AbstractAuditingEntity<Long> implements Serial
         this.nome = nome;
     }
 
-    public String getDescricao() {
-        return this.descricao;
+    public String getObs() {
+        return this.obs;
     }
 
-    public ClassePadrao descricao(String descricao) {
-        this.setDescricao(descricao);
+    public ArqMetadata obs(String obs) {
+        this.setObs(obs);
         return this;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setObs(String obs) {
+        this.obs = obs;
+    }
+
+    public String getArquivoContentType() {
+        return this.arquivoContentType;
+    }
+
+    public ArqMetadata arquivoContentType(String arquivoContentType) {
+        this.arquivoContentType = arquivoContentType;
+        return this;
+    }
+
+    public void setArquivoContentType(String arquivoContentType) {
+        this.arquivoContentType = arquivoContentType;
     }
 
     // Inherited createdBy methods
-    public ClassePadrao createdBy(String createdBy) {
+    public ArqMetadata createdBy(String createdBy) {
         this.setCreatedBy(createdBy);
         return this;
     }
 
     // Inherited createdDate methods
-    public ClassePadrao createdDate(Instant createdDate) {
+    public ArqMetadata createdDate(Instant createdDate) {
         this.setCreatedDate(createdDate);
         return this;
     }
 
     // Inherited lastModifiedBy methods
-    public ClassePadrao lastModifiedBy(String lastModifiedBy) {
+    public ArqMetadata lastModifiedBy(String lastModifiedBy) {
         this.setLastModifiedBy(lastModifiedBy);
         return this;
     }
 
     // Inherited lastModifiedDate methods
-    public ClassePadrao lastModifiedDate(Instant lastModifiedDate) {
+    public ArqMetadata lastModifiedDate(Instant lastModifiedDate) {
         this.setLastModifiedDate(lastModifiedDate);
         return this;
     }
@@ -122,39 +146,8 @@ public class ClassePadrao extends AbstractAuditingEntity<Long> implements Serial
         return !this.isPersisted;
     }
 
-    public ClassePadrao setIsPersisted() {
+    public ArqMetadata setIsPersisted() {
         this.isPersisted = true;
-        return this;
-    }
-
-    public Set<DadoPadrao> getDadoPadraos() {
-        return this.dadoPadraos;
-    }
-
-    public void setDadoPadraos(Set<DadoPadrao> dadoPadraos) {
-        if (this.dadoPadraos != null) {
-            this.dadoPadraos.forEach(i -> i.setClassePadrao(null));
-        }
-        if (dadoPadraos != null) {
-            dadoPadraos.forEach(i -> i.setClassePadrao(this));
-        }
-        this.dadoPadraos = dadoPadraos;
-    }
-
-    public ClassePadrao dadoPadraos(Set<DadoPadrao> dadoPadraos) {
-        this.setDadoPadraos(dadoPadraos);
-        return this;
-    }
-
-    public ClassePadrao addDadoPadrao(DadoPadrao dadoPadrao) {
-        this.dadoPadraos.add(dadoPadrao);
-        dadoPadrao.setClassePadrao(this);
-        return this;
-    }
-
-    public ClassePadrao removeDadoPadrao(DadoPadrao dadoPadrao) {
-        this.dadoPadraos.remove(dadoPadrao);
-        dadoPadrao.setClassePadrao(null);
         return this;
     }
 
@@ -165,10 +158,10 @@ public class ClassePadrao extends AbstractAuditingEntity<Long> implements Serial
         if (this == o) {
             return true;
         }
-        if (!(o instanceof ClassePadrao)) {
+        if (!(o instanceof ArqMetadata)) {
             return false;
         }
-        return getId() != null && getId().equals(((ClassePadrao) o).getId());
+        return getId() != null && getId().equals(((ArqMetadata) o).getId());
     }
 
     @Override
@@ -180,10 +173,11 @@ public class ClassePadrao extends AbstractAuditingEntity<Long> implements Serial
     // prettier-ignore
     @Override
     public String toString() {
-        return "ClassePadrao{" +
+        return "ArqMetadata{" +
             "id=" + getId() +
             ", nome='" + getNome() + "'" +
-            ", descricao='" + getDescricao() + "'" +
+            ", obs='" + getObs() + "'" +
+            ", arquivoContentType='" + getArquivoContentType() + "'" +
             ", createdBy='" + getCreatedBy() + "'" +
             ", createdDate='" + getCreatedDate() + "'" +
             ", lastModifiedBy='" + getLastModifiedBy() + "'" +

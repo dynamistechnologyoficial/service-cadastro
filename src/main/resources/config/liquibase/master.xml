@@ -16,10 +16,12 @@
 	<!--    Sprint 1 - Classes   -->
     <include file="config/liquibase/changelog/Sprint01/20240410001251_added_entity_ClassePadrao.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/Sprint01/20240410003915_added_entity_DadoPadrao.xml" relativeToChangelogFile="false"/>
-
+    <include file="config/liquibase/changelog/Sprint01/20240428024544_added_entity_ArquivoByte.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/Sprint01/20240428025135_added_entity_ArqMetadata.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!--    Sprint 1 - Constraints   -->
     <include file="config/liquibase/changelog/Sprint01/20240410003915_added_entity_constraints_DadoPadrao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/Sprint01/20240428024544_added_entity_constraints_ArquivoByte.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <include file="config/liquibase/changelog/20250323143025_added_entity_EntityAuditEvent.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->

@@ -20,6 +20,10 @@ public interface DadoPadraoMapper extends EntityMapper<DadoPadraoDTO, DadoPadrao
  // @Mapping(source = "classePadrao", target = "classePadrao")
     @Mapping(source = "idDado", target = "id.idDado")
     @Mapping(source = "classePadraoId", target = "id.classePadraoId")
+    @Mapping(source = "idDadoDependencia", target = "dadoPadraoDependencia.id.idDado")
+    @Mapping(source = "classePadraoIdDependencia", target = "dadoPadraoDependencia.id.classePadraoId")
+    @Mapping(source = "idDadoDependencia", target = "dadoPadraoDependencia.idDado")
+    @Mapping(source = "classePadraoIdDependencia", target = "dadoPadraoDependencia.classePadrao.id")
     DadoPadrao toEntity(DadoPadraoDTO s);
 
     @Named("classePadraoNome")

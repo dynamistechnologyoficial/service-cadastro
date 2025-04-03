@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20240428024544"
+  },
+  "clientRootFolder": "ServiceCadastro",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "arquivo_byte",
+  "fields": [
+    {
+      "fieldName": "arquivo",
+      "fieldType": "AnyBlob",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "microserviceName": "ServiceCadastro",
+  "name": "ArquivoByte",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "id": false,
+      "otherEntityField": "id",
+      "otherEntityName": "arqMetadata",
+      "otherEntityRelationshipName": "arquivoByte",
+      "relationshipName": "ArqMetadata",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": ["required"]
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
